@@ -21,5 +21,46 @@ public class Personaje {
         this.edad = edad;
         this.region = region;
     }
+
+    //Getters - Setters
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+
+    public String[] getElemento() {
+        return elemento;
+    }
+
+
+    public void setElemento(String[] elemento) {
+        this.elemento = elemento;
+    }
+
+
+    public int getEdad() {
+        return edad;
+    }
+
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+
+    public String getRegion() {
+        return region;
+    }
+
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
         
 }
