@@ -13,8 +13,8 @@ public class ArrayNomsInvertitINumeroConsonats {
 		String [] noms = new String[MAX_LON];
 		String nom = "";
 		boolean completat = false;
+		boolean esta = false;
 		int increment = 0;
-		String invertit = "";
 		String nomInvertit = "";
 		int contarCaracter = 0;
 		int numeroRandom = 0;
@@ -34,14 +34,13 @@ public class ArrayNomsInvertitINumeroConsonats {
 			} else {
 				
 				for (int j = 0; j < nom.length(); j++) {
-					invertit = ("" + (nom.charAt(j)));
-					//System.out.print());
-					
-					nomInvertit = invertit;
-					
+					nomInvertit += ("" + (nom.charAt(nom.length() - 1 - j)));//("" + candena.charAt()) permet fer un casting de char a string
 				}
 				
-				//noms[increment] = nomInvertit;
+				//Guardem cada nom en una variable
+//				for (int i = 0; i < noms.length; i++) {
+//					
+//				}
 				noms[increment] = nomInvertit;
 				increment++;
 				if (increment == MAX_LON) {	
@@ -80,18 +79,22 @@ public class ArrayNomsInvertitINumeroConsonats {
 		
 		numeroRandom = aleatori.nextInt(65, 90+1);
 		
-		System.out.println("El número aleatori es: " + (char)numeroRandom);
+		System.out.println("El caracter aleatori es: " + (char)numeroRandom);
 		c = (char)numeroRandom;
 		
 		//Fer recompte
 		for (int i = 0; i < noms.length; i++) {
-			
-			if (noms[i] == ("" + c)) {
+			if (noms[i].contains("" + c)) {
 				contarCaracter++;
+				esta = true;
 			}
 		}
 		
-		System.out.println("El caracter es troba " + contarCaracter);
+		if (esta) {
+			System.out.println("El caracter es troba " + contarCaracter + " vegada/es");
+		} else {
+			System.out.println("El caracter no es troba");
+		}
 			
 		//tancar escaner
 		sc.close();
