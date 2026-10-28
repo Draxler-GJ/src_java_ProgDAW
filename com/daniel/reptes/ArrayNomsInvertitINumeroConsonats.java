@@ -31,16 +31,16 @@ public class ArrayNomsInvertitINumeroConsonats {
 			if (nom.isBlank()) {
 				System.err.println("El camp no pot quedar vuit");
 				completat = false;
-			} else if(((nom.contains("1") || nom.charAt(0) == '1')) ||
-					((nom.contains("2") || nom.charAt(0) == '2')) ||
-					((nom.contains("3") || nom.charAt(0) == '3')) ||
-					((nom.contains("4") || nom.charAt(0) == '4')) ||
-					((nom.contains("5") || nom.charAt(0) == '5')) ||
-					((nom.contains("6") || nom.charAt(0) == '6')) ||
-					((nom.contains("7") || nom.charAt(0) == '7')) ||
-					((nom.contains("8") || nom.charAt(0) == '8')) ||
-					((nom.contains("9") || nom.charAt(0) == '9')) ||
-					((nom.contains("0") || nom.charAt(0) == '0'))){
+			} else if(nom.contains("1") ||
+					nom.contains("2") ||
+					nom.contains("3") ||
+					nom.contains("4") || 
+					nom.contains("5") || 
+					nom.contains("6") || 
+					nom.contains("7") || 
+					nom.contains("8") || 
+					nom.contains("9") || 
+					nom.contains("0") ){
 				System.err.println("El camp no pot començar o tenir ni ser número enter");
 				completat = false;
 			} else {
@@ -48,7 +48,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 				for (int j = 0; j < nom.length(); j++) {
 					nomInvertit += ("" + (nom.charAt(nom.length() - 1 - j)));//("" + candena.charAt()) permet fer un casting de char a string
 				}
-				
+				//Doble bucle for per a guardar cada posicio del nom
 				//Guardem cada nom en una variable
 //				for (int i = 0; i < noms.length; i++) {
 //					
@@ -78,7 +78,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 		//Mostren el el valor del array invertit i cada nom al reves
 		
 		System.out.print("Matriu de noms invertida: " + "\n[");
-		for (int i = noms.length -1; i >= 0; i--) {
+		for (int i = noms.length -1; i >= 0; i--) {//Doble bucle for per a recorrer
 			
 			if (i == 0) {
 				System.out.println(noms[i] + "]");
