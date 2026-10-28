@@ -25,7 +25,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 		//demanen el noms per bucle
 		
 		do {//Fer comprobació de que els valors que introduisques no es repetisques i tornarlos a introduir
-			System.out.println("Introduix un nóm");
+			System.out.println("Introduix un nóm (" + (increment + 1) + "):");
 			
 			nom = sc.nextLine().toUpperCase().trim();
 			if (nom.isBlank()) {
@@ -45,6 +45,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 				completat = false;
 			} else {
 				
+				nomInvertit = "";
 				for (int j = 0; j < nom.length(); j++) {
 					nomInvertit += ("" + (nom.charAt(nom.length() - 1 - j)));//("" + candena.charAt()) permet fer un casting de char a string
 				}
@@ -62,7 +63,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 			
 		} while(increment < MAX_LON && !completat);	
 		
-			
+		System.out.println("=================================");
 		//mostrem
 		
 		System.out.print("Matriu de noms:" +  "\n[");
@@ -75,6 +76,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 			
 		}
 		
+		System.out.println("=================================");
 		//Mostren el el valor del array invertit i cada nom al reves
 		
 		System.out.print("Matriu de noms invertida: " + "\n[");
@@ -88,6 +90,7 @@ public class ArrayNomsInvertitINumeroConsonats {
 		}
 			
 		//AÇI ANIRA TOTA LA LÖGICA DEL RANDOM I BUSCAR LA CANTITAT DE CHAR AMB IXE VALOR HI HAN
+		System.out.println("=================================");
 		
 		numeroRandom = aleatori.nextInt(65, 90+1);
 		
@@ -98,14 +101,17 @@ public class ArrayNomsInvertitINumeroConsonats {
 		for (int i = 0; i < noms.length; i++) {
 			if (noms[i].contains("" + c) || noms[i].charAt(i) == c) {
 				contarCaracter++;
-				esta = true;
+				esta = true;//Probar a contar en doble bucle for -> Millorar lògica
 			}
-		}//Queda mostrar un grafic aon es vetja la quantitat de vegades que cada part del array te un un valor dins de la seua cadena
+		}
 		
-		if (esta) {
-			System.out.println("El caracter es troba " + contarCaracter + " vegada/es");
-		} else {
-			System.out.println("El caracter no es troba");
+		//Queda mostrar un grafic aon es vetja la quantitat de vegades que cada part del array te un un valor dins de la seua cadena
+		for (int i = 0; i < noms.length; i++) {
+			if (esta) {
+				System.out.println(c + " en el nom " + noms[i] + " es troba " + contarCaracter + " vegada/es");
+			} else {
+				System.out.println(c + " en el nom " + noms[i] + " no es troba");
+			}
 		}
 			
 		//tancar escaner
