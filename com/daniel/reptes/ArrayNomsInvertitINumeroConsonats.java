@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ArrayNomsInvertitINumeroConsonats {
 
-	private static final int MAX_LON = 3;
+	private static final int MAX_LON = 5;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
