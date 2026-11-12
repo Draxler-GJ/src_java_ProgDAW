@@ -35,31 +35,31 @@ public class Traces2 {
 
 		System.out.println("==========================");
 
-//		int[] array1 = { 1, 2, 3, 4 };
-//		int[] array2 = { 5, 6, 7, 8 };
-//		boolean[] arrayBool = new boolean[array1.length];
-//		for (int i = 0; i < arrayBool.length; i++)
-//		arrayBool[i] = (array1[i] + array2[i]) >= 10;
-//		for (boolean b : arrayBool)
-//		if (b) System.out.print("/" + b + "\\");
+		int[] array1 = { 1, 2, 3, 4 };
+		int[] array2 = { 5, 6, 7, 8 };
+		boolean[] arrayBool = new boolean[array1.length];
+		for (int i = 0; i < arrayBool.length; i++)
+		arrayBool[i] = (array1[i] + array2[i]) >= 10;
+		for (boolean b : arrayBool)
+		if (b) System.out.print("/" + b + "\\");
 
 		System.out.println("===========================");
 
-//		String cad = "sargantana";
-//		char p[] = new char[cad.length()];
-//		for (int i = 0; i < p.length; i++)
-//			p[i] = cad.charAt(p.length - 1 - i);
-//		
-//		System.out.println(Arrays.toString(p));
-//		for (char c : p) {
-//			if (c >= 'a' && c <= 'n') {
-//				if (c == cad.charAt(cad.length() - 1)) {
-//					System.out.print(("" + c).toUpperCase());
-//				} else {
-//					System.out.print(c);
-//				}
-//			}
-//		}
+		String cad = "sargantana";
+		char p[] = new char[cad.length()];
+		for (int i = 0; i < p.length; i++)
+			p[i] = cad.charAt(p.length - 1 - i);
+		
+		//System.out.println(Arrays.toString(p));
+		for (char c : p) {
+			if (c >= 'a' && c <= 'n') {
+				if (c == cad.charAt(cad.length() - 1)) {
+					System.out.print(("" + c).toUpperCase());
+				} else {
+					System.out.print(c);
+				}
+			}
+		}
 
 		System.out.println("======================");
 
