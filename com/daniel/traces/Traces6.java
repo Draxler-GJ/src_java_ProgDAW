@@ -39,7 +39,7 @@ public class Traces6 {
 		String[] array2 = { "sort", "Sort", "fort", "Fort", "Cort" };
 		for (int i = 0; i < array2.length - 1; i++) {
 			if (i % 2 == 0) {
-				if (array2[i].compareToIgnoreCase(array[i + 1]) == 0) {
+				if (array2[i].compareToIgnoreCase(array2[i + 1]) == 0) {
 					System.out.print(array2[i]);
 				} else {
 					System.out.print(array2[i + 1].charAt(0));

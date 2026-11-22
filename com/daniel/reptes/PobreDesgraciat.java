@@ -86,7 +86,7 @@ public class PobreDesgraciat {
 		 * Tindrer en conter les poscions
 		 * */
 		
-		System.out.println("El perdedor es " + perdedor);
+		System.out.println("El perdedor es l'alumne" + perdedor);
 	}
 
 }
